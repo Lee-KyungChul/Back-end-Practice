@@ -34,12 +34,12 @@
 
 # ✅[논리 모델]
 
-<img width="592" height="337" alt="image" src="https://github.com/user-attachments/assets/26f00c45-0017-4173-9004-051595421f28" />
+<img width="545" height="307" alt="image" src="https://github.com/user-attachments/assets/36f74e4c-5a42-49c8-9f6f-a32a1cfb5160" />
 
 
 
 
 # ✅[물리 모델]
 
-<img width="859" height="385" alt="image" src="https://github.com/user-attachments/assets/f309380b-ab7e-49ff-9415-99913c4e4d82" />
+<img width="851" height="360" alt="image" src="https://github.com/user-attachments/assets/a551eacd-64af-4caa-bfc3-51348796a831" />
 
