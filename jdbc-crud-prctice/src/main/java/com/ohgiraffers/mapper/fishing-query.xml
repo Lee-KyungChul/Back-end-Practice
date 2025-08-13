@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+<!--    <entry key="selectRodGuide">-->
+<!--        select A.fish_name, A.fishing_point, A.fishing_type, A.fish_size, B.rod_name, B.rod_type, rod_length, B.rod_action from-->
+<!--        (select fish_name, fishing_point, fishing_type, fish_size-->
+<!--        from tbl_fish-->
+<!--        where fish_name = ?) as A-->
+<!--        join tbl_rod B-->
+<!--        on A.fishing_point = B.fishing_point-->
+<!--        AND A.fish_size = B.fish_size-->
+<!--        AND A.fishing_type = B.rod_type-->
+<!--        WHERE A.fishing_point = ? AND B.rod_type = ? AND B.fish_size = ?-->
+<!--    </entry>-->
+<!--    <entry key="selectReelGuide">-->
+<!--        select A.fish_name, A.fishing_point, A.fishing_type, A.fish_size, B.reel_name, B.reel_type, reel_weight from-->
+<!--        (select fish_name, fishing_point, fishing_type, fish_size-->
+<!--        from tbl_fish-->
+<!--        where fish_name = ?-->
+<!--        ) as A-->
+<!--        join tbl_reel B-->
+<!--        on A.fishing_point = B.fishing_point-->
+<!--        AND A.fish_size = B.reel_weight-->
+<!--        AND A.fishing_type = B.reel_type-->
+<!--        WHERE B.fishing_point = ?-->
+<!--        AND B.reel_weight = ?-->
+<!--    </entry>-->
+
+
+
+    <entry key="selectAllFishList">
+        SELECT
+        fish_no
+        , fish_name
+        , fishing_type
+        , fishing_point
+        , fish_size
+        FROM TBL_FISH
+    </entry>
+
+    <entry key="selectLastFishNo">
+        SELECT MAX(A.fish_no)
+        FROM TBL_FISH A
+    </entry>
+
+    <entry key="insertNewFish">
+        INSERT INTO TBL_FISH
+        (
+        fish_no
+        , fish_name
+        , fishing_type
+        , fishing_point
+        , fish_size
+        )
+        VALUES
+        (
+        ?
+        , ?
+        , ?
+        , ?
+        , ?
+        )
+    </entry>
+
+    <entry key="updateFish">
+        UPDATE TBL_FISH
+        SET fish_name = ?
+        , fishing_type = ?
+        , fishing_point = ?
+        , fish_size = ?
+        WHERE fish_no = ?
+    </entry>
+
+    <entry key="deleteFish">
+        DELETE
+        FROM TBL_FISH
+        WHERE fish_no = ?
+    </entry>
+
+
+    <entry key="selectLastReelNo">
+        SELECT MAX(A.REEL_NO)
+        FROM  TBL_REEL A
+    </entry>
+    <entry key="selectAllReelList">
+        SELECT
+            REEL_NO,
+            FISHING_POINT,
+            FISHING_TYPE,
+            REEL_NAME,
+            REEL_TYPE,
+            REEL_WEIGHT
+        FROM TBL_REEL
+    </entry>
+<!--    <entry key="selectTargetReel">-->
+<!--        SELECT-->
+<!--            REEL_NO,-->
+<!--            FISHING_POINT,-->
+<!--            FISHING_TYPE,-->
+<!--            REEL_NAME,-->
+<!--            REEL_TYPE,-->
+<!--            REEL_WEIGHT-->
+<!--            FROM TBL_REEL-->
+<!--        WHERE ? = ?-->
+<!--    </entry>-->
+    <entry key="insertNewReel">
+        INSERT INTO TBL_REEL
+        (
+            REEL_NO,
+            FISHING_POINT,
+            FISHING_TYPE,
+            REEL_NAME,
+            REEL_TYPE,
+            REEL_WEIGHT
+            )
+        VALUES
+        (
+            ?, ? , ? , ? , ? , ?
+        )
+    </entry>
+    <entry key="updateReel">
+        UPDATE TBL_REEL
+        SET
+            FISHING_POINT = ?,
+            FISHING_TYPE = ?,
+            REEL_NAME = ?,
+            REEL_TYPE = ?,
+            REEL_WEIGHT = ?
+        WHERE
+            REEL_NO = ?
+    </entry>
+    <entry key="deleteReel">
+        DELETE FROM TBL_REEL
+        WHERE
+            REEL_NO = ?
+    </entry>
+
+
+
+
+    <entry key="selectLastRodNo">
+        SELECT MAX(A.ROD_NO)
+        FROM TBL_ROD A
+    </entry>
+    <entry key="selectAllRodList">
+        SELECT
+            ROD_NO,
+            FISHING_POINT,
+            ROD_TYPE,
+            ROD_NAME,
+            ROD_LENGTH,
+            ROD_ACTION,
+            FISH_SIZE
+        FROM TBL_ROD
+    </entry>
+<!--    <entry key="selectRodByRodName">-->
+<!--        SELECT-->
+<!--            ROD_NO,-->
+<!--            FISHING_POINT,-->
+<!--            ROD_TYPE,-->
+<!--            ROD_NAME,-->
+<!--            ROD_LENGTH,-->
+<!--            ROD_ACTION,-->
+<!--            FISH_SIZE-->
+<!--        FROM TBL_ROD-->
+<!--        WHERE ROD_NAME LIKE CONCAT('%', ?, '%')-->
+<!--    </entry>-->
+    <entry key="insertNewRod">
+        INSERT INTO TBL_ROD (ROD_NO, FISHING_POINT, ROD_TYPE, ROD_NAME, ROD_LENGTH, ROD_ACTION, FISH_SIZE)
+        VALUES
+        (
+            ?, ?, ?, ?, ?, ?, ?
+        )
+    </entry>
+    <entry key="updateRod">
+        UPDATE TBL_ROD
+        SET FISHING_POINT = ?,
+            ROD_TYPE = ?,
+            ROD_NAME = ?,
+            ROD_LENGTH = ?,
+            ROD_ACTION = ?,
+            FISH_SIZE = ?
+        WHERE ROD_NO = ?
+    </entry>
+    <entry key="deleteRod">
+        DELETE
+        FROM TBL_ROD
+        WHERE ROD_NO = ?
+    </entry>
+
+</properties>
